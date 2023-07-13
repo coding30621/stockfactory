@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주식</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="assets">
+        <div class="totalmoney"></div>
+        <div class="nowmoney"></div>
+        <div class="stockmoney"></div>
+    </div>
+    <div id="Area"></div>
+    <div class="chart stock_1" id="stock_1">
+        <div class="grid">
+            <div class="list">
+                <ul>
+                    <li>
+                        <p id="item">종목: 국어</p>
+                    </li>
+                    <li>
+                        <p id="price">현재가: 0원</p>
+                    </li>
+                    <li>
+                        <p id="holding">보유: 0주</p>
+                    </li>
+                    <li>
+                        <p id="profit">이울: 0% (0원)</p>
+                    </li>
+                </ul>  
+            </div>
+            <div class="stockchart" id="Korean_chart"></div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="system/system.js"></script>
+    <script>
+        function create_div(id, class_) {
+            let Area = document.getElementById('Area')
+            let new_div = document.createElement('div')
+            new_div.setAttribute('id', id)
+            new_div.setAttribute('class', class_)
+            Area.appendChild(new_p)
+        }
+
+        function create_grid(Area) {
+            let Area = document.getElementById(Area)
+            let new_div = document.createElement('div')
+            new_div.setAttribute('class', 'grid')
+            Area.appendChild(new_div)
+        }
+
+        function create_list(id, class_) {
+            let Area = document.getElementById('Area')
+            let new_p = document.createElement('div')
+            new_p.setAttribute('id', id)
+            new_p.setAttribute('class', class_)
+            Area.appendChild(new_p)
+        }
+
+        function create_button(id, onclick, inner) {
+            let Area = document.getElementById('Area')
+            let new_button = document.createElement('button')
+            new_button.setAttribute('class', 'button')
+            new_button.setAttribute('id', id)
+            new_button.setAttribute('onclick', onclick)
+            new_button.innerHTML = inner
+            Area.appendChild(new_button)
+        }
+
+        function start_set() {
+            create_div('1','class')
+        }
+
+        window.start_set()
+    </script>
+</body>
+</html>
